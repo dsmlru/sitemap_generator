@@ -19,7 +19,6 @@ module SitemapGenerator
         builder = ::Builder::XmlMarkup.new if builder.nil?
         builder.sitemap do
           builder.loc        self[:loc]
-          builder.lastmod    w3c_date(self[:lastmod])   if self[:lastmod]
         end
         builder << '' # force to string
       end
